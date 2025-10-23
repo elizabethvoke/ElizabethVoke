@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elizabeth Voke, Ph.D.</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 2rem auto;
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    h1 { color: #222; }
+    h2 { margin-top: 2rem; }
+    ul { margin-left: 1.5rem; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; color: #666; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Elizabeth Voke, Ph.D.</h1>
+  <p>Scientist (LNPs & proteomics) · Startup strategy for biotech and life-science teams.</p>
+
+  <h2>What I do</h2>
+  <ul>
+    <li>Rapid landscape reviews for early-stage biotech ideas</li>
+    <li>Experiment-to-insight workflows: proteomics, LNPs, assay design</li>
+    <li>Translational roadmapping: milestones, risks, and proof points</li>
+  </ul>
+
+  <h2>Selected Work</h2>
+  <p>Nature Communications paper on the LNP protein corona; label-free MS workflows; collaborations with Whitehead/MIT/CMU.</p>
+
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:hello@elizabethvoke.com">hello@elizabethvoke.com</a></p>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke
+  </footer>
+</body>
+</html>
