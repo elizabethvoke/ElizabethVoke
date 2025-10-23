@@ -1,10 +1,23 @@
+/* Typeface: Inter (clean, modern, consulting-style) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root{
+  /* Palette */
   --bg:#ffffff;
-  --ink:#0f172a;
-  --muted:#52525b;
-  --line:#e5e7eb;
-  --brand:#0b83bd;
-  --brand-ink:#093e57;
+  --ink:#0e1116;          /* primary text */
+  --muted:#5b616e;        /* secondary text */
+  --line:#e6e9ee;         /* dividers */
+  --brand:#0b83bd;        /* action / active */
+  --brand-ink:#0a5f87;
+
+  /* Surface tints */
+  --surface:#f7f9fc;
+  --surface-strong:#eff3f9;
+
+  /* Rhythm */
+  --radius:14px;
+  --radius-pill:999px;
+  --shadow:0 8px 24px rgba(16,24,40,0.06);
 }
 
 *{box-sizing:border-box}
@@ -13,57 +26,129 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  font-family:'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
   line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
+
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 
-.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+
+/* ---------- Header / Topbar ---------- */
 header.site{
+  position:relative;
   border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,#f8fafc,transparent);
+  background:
+    radial-gradient(1200px 400px at 50% -50%, var(--surface), transparent 70%),
+    linear-gradient(180deg, #f9fbfe 0%, #ffffff 60%);
 }
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:18px 0;
+}
 .brand{
   font-weight:700; letter-spacing:.2px;
+  padding:8px 12px;
+  border-radius:10px;
 }
-nav.tabs{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- Tabs / Nav ---------- */
+nav.tabs{display:flex;gap:10px;flex-wrap:wrap}
 .tabs a{
-  display:inline-block;
-  padding:10px 14px;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;
   border:1px solid var(--line);
-  border-radius:999px;
+  border-radius:var(--radius-pill);
   color:var(--ink);
   background:#fff;
+  transition:all .18s ease;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+}
+.tabs a:hover{
+  transform:translateY(-1px);
+  box-shadow:var(--shadow);
+  text-decoration:none;
 }
 .tabs a.active{
   border-color:var(--brand);
   color:#fff;
   background:var(--brand);
 }
+
+/* Prominent CTA (Contact) */
 .cta{
-  padding:10px 16px;
-  border-radius:999px;
-  color:#fff;
+  padding:10px 18px;
+  border-radius:var(--radius-pill);
+  color:#fff !important;
   background:var(--brand);
   border:1px solid var(--brand);
 }
-.cta:hover{filter:brightness(.95); text-decoration:none}
+.cta:hover{filter:brightness(.96); text-decoration:none}
 
-.hero{padding:56px 0 12px}
-h1{font-size:clamp(28px,5vw,40px);margin:0 0 6px}
-.tagline{color:var(--muted);max-width:46ch}
+/* ---------- Hero ---------- */
+.hero{padding:60px 0 6px}
+h1{
+  font-size:clamp(30px,5vw,42px);
+  margin:0 0 6px;
+  letter-spacing:.2px;
+}
+.tagline{
+  color:var(--muted);
+  max-width:60ch;
+}
 
-main{padding:28px 0 64px}
-h2{font-size:clamp(22px,3vw,28px);margin:24px 0 8px}
-h3{font-size:18px;margin:18px 0 6px}
-p.lead{color:var(--muted);max-width:62ch}
-ul.clean{padding-left:18px;margin:10px 0}
-ul.clean li{margin:6px 0}
-.divider{height:1px;background:var(--line);margin:24px 0}
+/* ---------- Main Content ---------- */
+main{padding:28px 0 72px}
+h2{
+  font-size:clamp(22px,3vw,28px);
+  margin:26px 0 10px;
+  position:relative;
+}
+h2::after{
+  content:"";
+  display:block;
+  width:64px;height:3px;
+  margin-top:8px;
+  background:linear-gradient(90deg, var(--brand), transparent);
+  border-radius:2px;
+}
+h3{font-size:18px;margin:18px 0 8px}
 
-footer.site{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
-
+p.lead{color:var(--muted);max-width:72ch}
 .note{color:var(--muted);font-size:14px}
+
+ul.clean{padding-left:20px;margin:10px 0}
+ul.clean li{margin:8px 0}
+
+/* Divider with subtle strength */
+.divider{
+  height:1px;background:var(--line);
+  margin:26px 0;
+}
+
+/* ---------- Cards (auto style existing blocks) ---------- */
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px 18px;
+}
+
+/* ---------- Footer ---------- */
+footer.site{
+  border-top:1px solid var(--line);
+  padding:28px 0;
+  color:var(--muted);
+  font-size:14px;
+  text-align:center;
+  background:linear-gradient(180deg,#ffffff,#f9fbfe);
+}
+
+/* ---------- Small tweaks for consulting feel ---------- */
 .small{font-size:14px}
+em, i{color:var(--muted)}
+strong{font-weight:600}
