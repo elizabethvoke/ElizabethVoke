@@ -3,168 +3,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Elizabeth Voke, Ph.D. — Publications & Consulting</title>
-  <meta name="description" content="Elizabeth Voke, Ph.D. — publications in lipid nanoparticles and proteomics, and ad-hoc startup strategy consulting for biotech/life sciences." />
-
+  <title>Elizabeth Voke, Ph.D.</title>
+  <meta name="description" content="Elizabeth Voke, Ph.D. — Drug delivery scientist with experience in proteomics, now focusing on business strategy consulting. Publications, experience, and contact." />
   <style>
     :root{
-      --fg:#0f172a; --muted:#52525b; --bg:#ffffff; --line:#e5e7eb; --brand:#0ea5e9;
+      --bg:#ffffff;
+      --fg:#0f172a;
+      --muted:#52525b;
+      --line:#e5e7eb;
+      --brand:#0ea5e9;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;background:var(--bg);color:var(--fg);line-height:1.6}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    header{padding:48px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f8fafc,transparent)}
-    .wrap{max-width:980px;margin:0 auto;padding:0 16px}
-    .hero{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-    .name{font-size:clamp(28px,4vw,40px);font-weight:700;margin:0}
-    .subtitle{color:var(--muted);margin:0}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:880px;margin:0 auto;padding:0 16px}
+    header{padding:60px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f8fafc,transparent)}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 4px}
+    h2{font-size:clamp(22px,3vw,28px);margin:32px 0 12px}
+    h3{margin:20px 0 6px;font-size:18px}
+    section{padding:24px 0;border-bottom:1px solid var(--line)}
+    ul{margin:0;padding-left:18px}
+    li{margin:6px 0}
     nav{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 14px;border-radius:999px;background:#fff}
-    main{padding:32px 0 64px}
-    section{padding:32px 0;border-bottom:1px solid var(--line)}
-    h2{font-size:clamp(22px,3vw,28px);margin:0 0 12px}
-    .eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:12px;margin-bottom:4px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:720px){ .grid-2{grid-template-columns:1.1fr .9fr} }
-    .card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
-    .list{margin:0;padding:0;list-style:none}
-    .list li{padding:14px 0;border-bottom:1px dashed var(--line)}
-    .list li:last-child{border-bottom:0}
-    .pill{font-size:12px;border:1px solid var(--line);padding:4px 8px;border-radius:999px;color:#334155;background:#f8fafc}
-    footer{padding:24px 16px;color:var(--muted);text-align:center}
+    .btn{border:1px solid var(--line);padding:10px 14px;border-radius:999px}
+    footer{padding:40px 16px;color:var(--muted);font-size:14px;text-align:center}
+    .muted{color:var(--muted)}
   </style>
 </head>
+
 <body>
-  <!-- ===== HEADER / HERO ===== -->
-  <header>
-    <div class="wrap hero">
-      <h1 class="name">Elizabeth Voke, Ph.D.</h1>
-      <p class="subtitle">Scientist (LNPs & proteomics). Ad-hoc <strong>startup strategy</strong> support for biotech & life-science teams.</p>
-      <nav>
-        <a class="btn" href="#publications">Publications</a>
-        <a class="btn" href="#consulting">Consulting</a>
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn" href="https://www.linkedin.com/in/elizabethvoke" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/elizabethvoke" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-    </div>
-  </header>
+<header class="wrap">
+  <h1>Elizabeth Voke, Ph.D.</h1>
+  <p class="muted">Drug delivery scientist with experience in proteomics, now focusing on business strategy consulting.</p>
+  <nav>
+    <a class="btn" href="#about">About</a>
+    <a class="btn" href="#publications">Publications</a>
+    <a class="btn" href="#experience">Experience</a>
+    <a class="btn" href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main class="wrap">
+<main class="wrap">
 
-    <!-- ===== ABOUT (optional short blurb) ===== -->
-    <section id="about">
-      <div class="eyebrow">About</div>
-      <div class="grid grid-2">
-        <p>
-          I’m a Ph.D. scientist trained at UC Berkeley (Landry Lab) focusing on lipid nanoparticles (LNPs) and label-free proteomics to study the protein corona.
-          I currently work at Bain; this site captures my publications and a lightweight consulting profile I may activate post-Bain.
-        </p>
-        <div class="card">
-          <strong>Areas:</strong>
-          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
-            <span class="pill">LNPs</span>
-            <span class="pill">Protein corona</span>
-            <span class="pill">LC-MS/MS workflows</span>
-            <span class="pill">Assay/Study design</span>
-            <span class="pill">Startup strategy</span>
-            <span class="pill">Landscape reviews</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="about">
+  <h2>About</h2>
+  <p>I recently completed my Ph.D. in Chemical and Biomolecular Engineering at the University of California, Berkeley, where I studied lipid nanoparticles and protein coronas using label-free proteomics. I will soon begin work at Bain &amp; Company, where I’m excited to apply a scientific problem-solving mindset to business strategy. I’ve always been interested in the intersection of science, innovation, and entrepreneurship, and I enjoy exploring how early-stage technologies translate into real-world impact.</p>
 
-    <!-- ===== PUBLICATIONS ===== -->
-    <section id="publications">
-      <div class="eyebrow">Research</div>
-      <h2>Selected Publications</h2>
-      <ul class="list">
-        <li>
-          <strong>Lipid nanoparticle protein corona modulates intracellular trafficking and mRNA expression</strong> — <em>Nature Communications</em>, 2025.
-          <br/>E. Voke, <span style="color:var(--muted)">et al.</span>
-          <br/><a href="https://www.nature.com/" target="_blank" rel="noopener">Link / DOI</a>
-        </li>
-        <li>
-          <strong>Label-free proteomics workflow for nanoparticle corona characterization</strong> — <em>ACS Sensors</em>, year.
-          <br/>E. Voke, <span style="color:var(--muted)">et al.</span>
-          <br/><a href="#" target="_blank" rel="noopener">Link / DOI</a>
-        </li>
-        <li>
-          <strong>Perspective: Proteomic considerations for soft nanoparticle analyses</strong> — <em>Small</em> or <em>Nat Rev Bioeng</em>, year.
-          <br/>E. Voke, <span style="color:var(--muted)">et al.</span>
-          <br/><a href="#" target="_blank" rel="noopener">Link</a>
-        </li>
-      </ul>
+  <p><strong>Expertise:</strong> Drug delivery • Proteomics • Nanotechnology • Genetic engineering • Scientific writing • Market landscapes • Experimental design • Data analysis</p>
 
-      <details style="margin-top:12px">
-        <summary>Add a new publication</summary>
-        <p style="margin:8px 0 0">
-          Duplicate one of the list items above and edit the title, journal, year, authors, and link/DOI.  
-          Order newest → oldest.
-        </p>
-      </details>
-    </section>
+  <p class="muted"><em>Availability for ad-hoc projects is subject to current employer policies. Happy to discuss future collaborations.</em></p>
+</section>
 
-    <!-- ===== CONSULTING ===== -->
-    <section id="consulting">
-      <div class="eyebrow">Ad-hoc</div>
-      <h2>Consulting</h2>
-      <div class="grid grid-2">
-        <div>
-          <p>
-            I occasionally support founders and R&D leaders with focused, time-boxed projects.
-            My edge combines hands-on LNP/proteomics expertise with structured, outcomes-oriented execution.
-          </p>
-          <h3 style="margin:16px 0 8px;font-size:18px">Typical engagements (1–4 weeks)</h3>
-          <ul class="list">
-            <li><strong>Landscape & signal scan:</strong> concise review of targets, modalities, comparators, and technical risks.</li>
-            <li><strong>Assay & workflow design:</strong> label-free proteomics pipelines, corona isolation QC, and analysis plans.</li>
-            <li><strong>Go/No-Go proof points:</strong> milestone framing, experiment prioritization, and readout criteria.</li>
-            <li><strong>Data-to-insight:</strong> analysis notebooks (Python/pandas/matplotlib), figures, and decision memos.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="margin:0 0 8px;font-size:18px">Relevant experience</h3>
-          <ul class="list" style="margin-top:8px">
-            <li><strong>Ph.D., UC Berkeley (Landry Lab):</strong> LNP protein corona; density-gradient ultracentrifugation; LC-MS/MS.</li>
-            <li><strong>Collaborations:</strong> Whitehead (MIT/CMU), Landry Lab, multi-site proteomics studies.</li>
-            <li><strong>Fellowships:</strong> NDSEG; venture exposure via Northpond Ventures fellowship.</li>
-            <li><strong>Consulting toolkit:</strong> structured problem-solving, crisp deliverables, stakeholder-ready slides.</li>
-          </ul>
-          <p style="margin-top:8px;color:var(--muted);font-size:14px">
-            Note: I’m currently at Bain; ad-hoc work considered after Bain or with appropriate approvals.
-          </p>
-        </div>
-      </div>
+<section id="publications">
+  <h2>Publications</h2>
+  <p>My research spans nanoparticle–protein interactions, label-free proteomics, and translational nanomedicine, with applications in RNA delivery, assay harmonization, and plant biotechnology.</p>
 
-      <h3 style="margin:20px 0 8px;font-size:18px">How I work</h3>
-      <ul class="list">
-        <li><strong>Scoping call (30 min):</strong> align on objective, timeline, outputs.</li>
-        <li><strong>Fixed-scope proposal:</strong> brief workplan + price; start upon approval.</li>
-        <li><strong>Deliverables:</strong> short memo or slide deck; optional code/figures for methods sections.</li>
-      </ul>
+  <ul>
+    <li><a href="https://www.nature.com/articles/s41467-025-63726-2">Protein corona formed on lipid nanoparticles compromises delivery efficiency of mRNA cargo</a> — <em>Nature Communications</em>, 2025. <strong>E. Voke</strong>, M.L. Arral, H.J. Squire, T. Lin, L. Zheng, R. Coreas, A. Lui, M.P. Landry</li>
+    <li><a href="https://www.biorxiv.org/content/10.1101/2024.12.12.627884v1">Deep profiling of plant stress biomarkers following bacterial pathogen infection with protein corona-based nano-omics</a> — <em>bioRxiv</em>, 2024. R. Coreas, N. Sridhar, T.J. Lin, H.J. Squire, <strong>E. Voke</strong>, M.P. Landry</li>
+    <li><a href="https://www.nature.com/articles/s41467-023-44720-9">Harmonizing nanoparticle protein corona analysis across proteomics core facilities</a> — <em>Nature Communications</em>, 2024. H. Gharibi, A.A. Ashkarran, M. Jafari, <strong>E. Voke</strong>, M.P. Landry, A. Saei</li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/10.1002/smll.202301838">An overview of nanoparticle protein corona literature</a> — <em>Small</em>, 2023. M.J. Hajipour, R. Safavi-Sohi, S. Sharifi, N. Mahmoud, A.A. Ashkarran, <strong>E. Voke</strong>, …</li>
+    <li><a href="https://www.nature.com/articles/s44222-023-00019-2">The emerging role of nanotechnology in plant genetic engineering</a> — <em>Nature Reviews Bioengineering</em>, 2023. H.J. Squire, S. Tomatz, <strong>E. Voke</strong>, E. González-Grandío, M. Landry</li>
+    <li><a href="https://link.springer.com/article/10.1007/s40820-022-00871-2">Importance of standardizing analytical characterization methodology for improved reliability of the nanomedicine literature</a> — <em>Nano-Micro Letters</em>, 2022. S. Sharifi, N. Mahmoud, <strong>E. Voke</strong>, M.P. Landry, M. Mahmoudi</li>
+    <li><a href="https://www.nature.com/articles/s41467-022-34286-5">Measurements of heterogeneity in proteomics analysis of the nanoparticle protein corona across core facilities</a> — <em>Nature Communications</em>, 2022. A.A. Ashkarran, H. Gharibi, <strong>E. Voke</strong>, M.P. Landry, A. Saei, M. Mahmoudi</li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/acssensors.1c00653">In Planta Nanosensors: Understanding Biocorona Formation for Functional Design</a> — <em>ACS Sensors</em>, 2021. <strong>E. Voke</strong>, R.L. Pinals, N.S. Goh, M.P. Landry</li>
+    <li><a href="https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp02917k">The benefit of poor mixing: kinetics of coacervation</a> — <em>Physical Chemistry Chemical Physics</em>, 2020. W.B. McTigue, <strong>E. Voke</strong>, L.W. Chang, S.L. Perry</li>
+  </ul>
+</section>
 
-      <p style="margin-top:12px">
-        <a class="btn" href="#contact">Start a scoping conversation</a>
-      </p>
-    </section>
+<section id="experience">
+  <h2>Experience</h2>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact">
-      <div class="eyebrow">Get in touch</div>
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:hello@elizabethvoke.com">hello@elizabethvoke.com</a><br/>
-        LinkedIn: <a href="https://www.linkedin.com/in/elizabethvoke" target="_blank" rel="noopener">linkedin.com/in/elizabethvoke</a>
-      </p>
-      <p style="color:var(--muted);font-size:14px">
-        Prefer email for project inquiries. I’m happy to sign an NDA for sensitive discussions.
-      </p>
-    </section>
-  </main>
+  <p><strong>Bridge to Consulting</strong> — <em>Spring 2024</em><br>
+  • Link to L.E.K. Consulting – accepted into program and completed mock case for team competition; won 1st place out of six teams.<br>
+  • McKinsey Insight – accepted into highly competitive workshop on consulting for advanced-degree candidates.<br>
+  • ADVantage at Bain – week-long internship; joined case team and developed project scope for the next iteration of a live project.</p>
 
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke — All rights reserved
-  </footer>
+  <p><strong>Asparaglue — Strategy Consultant</strong> — <em>Spring 2024</em><br>
+  • Conducted market research and competitive analysis to benchmark Asparaglue’s technology against existing platforms.</p>
+
+  <p><strong>Northpond Ventures — Venture Fellow</strong> — <em>Fall 2023 – Present</em><br>
+  • Interviewed 15+ Key Opinion Leaders to landscape RNA technologies and constructed investment guidelines for the Biotechnology investment team.</p>
+
+  <p><strong>Berkeley Life Sciences Entrepreneurship Center / Nucleate — Venture Fellow</strong> — <em>Spring 2023 – Present</em><br>
+  • Generated a landscape report of innovative biomaterials technologies from the UC Berkeley ecosystem.<br>
+  • Presented findings to the wider University of California network, highlighting key hurdles and company-formation patterns.<br>
+  • Sourced information from seven Berkeley labs to assess potential for new company formation; reported promising labs to the LSEC center for ongoing monitoring.</p>
+
+  <p><strong>National Science Foundation I-Corps — Bay Area Cohort</strong> — <em>Spring 2023</em><br>
+  • Developed plan for commercialization of patented plant-genetic-engineering technology from the Landry Lab.<br>
+  • Recruited and led a team of four PhD students through application and acceptance into the program.<br>
+  • Developed and iterated on a business plan for commercialization based on 15+ interviews with key industry stakeholders, including small biotech CEOs and scientists at Bayer and Syngenta.</p>
+
+  <p><strong>Berkeley Innovative Solutions — Consultant for Anthro Energy</strong> — <em>Fall 2021</em><br>
+  • Worked with a team of business students to develop new applications for battery technology.<br>
+  • Led weekly meetings with the Anthro Energy CEO to discuss research updates and commercialization potential.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:evoke@berkeley.edu">evoke@berkeley.edu</a><br>
+  LinkedIn: <a href="https://www.linkedin.com/in/elizabethvoke" target="_blank">linkedin.com/in/elizabethvoke</a><br>
+  GitHub: <a href="https://github.com/elizabethvoke" target="_blank">github.com/elizabethvoke</a></p>
+
+  <p class="muted">Your contact details will only be used for direct correspondence.</p>
+</section>
+
+</main>
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke. All rights reserved.
+</footer>
+
 </body>
 </html>
