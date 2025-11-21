@@ -8,30 +8,46 @@
   <meta name="description" content="Contact Elizabeth Voke, Ph.D." />
 </head>
 <body>
-<header class="site">
-  <div class="wrap topbar">
-    <div class="brand">Elizabeth Voke, Ph.D.</div>
-    <nav class="tabs">
-      <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
-      <a href="experience.html">Experience</a>
-      <a href="contact.html" class="active cta">Contact</a>
-    </nav>
+  <header class="site">
+    <div class="wrap topbar">
+      <div class="brand">Elizabeth Voke, Ph.D.</div>
+      <nav class="tabs">
+        <a href="index.html">About</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="publications.html">Publications</a>
+            <a href="presentations.html">Presentations</a>
+          </div>
+        </div>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html" class="active cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap hero">
+    <h1>Contact</h1>
+    <p class="tagline">For speaking, collaborations, or general inquiries.</p>
   </div>
-</header>
 
-<div class="wrap hero">
-  <h1>Contact</h1>
-  <p class="tagline">For speaking, collaborations, or inquiries.</p>
-</div>
+  <main class="wrap">
+    <!-- Email is constructed dynamically to reduce scraping -->
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <script>
+      const userPart = 'evoke';
+      const domainPart = 'berkeley.edu';
+      const assembled = userPart + '@' + domainPart;
+      const link = document.createElement('a');
+      link.href = 'mailto:' + assembled;
+      link.textContent = userPart + ' (at) ' + domainPart;
+      document.getElementById('email').appendChild(link);
+    </script>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/elizabethvoke" target="_blank" rel="noopener">linkedin.com/in/elizabethvoke</a></p>
+  </main>
 
-<main class="wrap">
-  <p><strong>Email:</strong> <a href="mailto:evoke@berkeley.edu">evoke@berkeley.edu</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/elizabethvoke" target="_blank" rel="noopener">linkedin.com/in/elizabethvoke</a></p>
-</main>
-
-<footer class="site">
-  © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke
-</footer>
+  <footer class="site">
+    © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke
+  </footer>
 </body>
 </html>

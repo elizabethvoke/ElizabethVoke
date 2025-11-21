@@ -152,3 +152,79 @@ footer.site{
 .small{font-size:14px}
 em, i{color:var(--muted)}
 strong{font-weight:600}
+
+/* ---------- Dropdown (Research) ---------- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the button inside the dropdown to resemble other tabs */
+.dropbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  background: #fff;
+  transition: all .18s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.dropbtn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+.dropbtn.active,
+.dropdown:hover .dropbtn {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 180px;
+  margin-top: 4px;
+  z-index: 10;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dropdown-content a:hover {
+  background-color: var(--surface);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ---------- About page profile layout ---------- */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
