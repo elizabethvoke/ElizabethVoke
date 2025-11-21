@@ -45,7 +45,6 @@ a:hover {
   padding: 0 22px;
 }
 
-
 /* ========================================================
    Header / Navigation
 ======================================================== */
@@ -106,7 +105,6 @@ nav.tabs button.dropbtn.active,
   color: #fff;
 }
 
-
 /* ========================================================
    Dropdown Menu (Research)
 ======================================================== */
@@ -133,20 +131,30 @@ nav.tabs button.dropbtn.active,
   z-index: 10;
 }
 
+/* Flatten dropdown items: remove bubbles and add subtle separators */
 .dropdown-content a {
   display: block;
-  padding: 10px 16px;
+  padding: 10px 14px;
   color: var(--ink);
+  background: #fff;
+  border-radius: 0;              /* no pill shape */
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;              /* no hover shadow */
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;           /* remove final divider */
 }
 
 .dropdown-content a:hover {
   background: var(--surface);
+  transform: none;
+  box-shadow: none;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* ========================================================
    Hero Section
@@ -165,7 +173,6 @@ h1 {
   color: var(--muted);
   max-width: 60ch;
 }
-
 
 /* ========================================================
    Main Content
@@ -228,7 +235,6 @@ ul.clean li {
   padding: 18px;
 }
 
-
 /* ========================================================
    About Page Split Layout (simple + aligned)
 ======================================================== */
@@ -241,8 +247,8 @@ ul.clean li {
 }
 
 .about-photo {
-  width: 120px;
-  height: 120px;
+  width: 240px;                /* doubled size */
+  height: 240px;               /* doubled size */
   border-radius: 10px;
   object-fit: cover;
   box-shadow: var(--shadow);
@@ -273,7 +279,6 @@ ul.clean li {
     margin-bottom: 16px;
   }
 }
-
 
 /* ========================================================
    Footer
