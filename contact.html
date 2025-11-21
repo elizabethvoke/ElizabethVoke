@@ -45,16 +45,16 @@
     </p>
 
     <script>
-      // scraping-safe email assembly
-      const user = "evoke";
-      const domain = "berkeley.edu";
-      const full = user + "@" + domain;
+      // Scraper-safe email assembly
+      const u = "evoke";
+      const d = "berkeley.edu";
+      const fullEmail = u + "@" + d;
 
-      const emailLink = document.createElement("a");
-      emailLink.href = "mailto:" + full;
-      emailLink.textContent = full;
+      const emailTag = document.createElement("a");
+      emailTag.href = "mailto:" + fullEmail;
+      emailTag.textContent = fullEmail;
 
-      document.getElementById("email").appendChild(emailLink);
+      document.getElementById("email").appendChild(emailTag);
     </script>
 
     <h2>LinkedIn</h2>
