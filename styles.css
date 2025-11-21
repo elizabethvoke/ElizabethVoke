@@ -1,20 +1,20 @@
-/* --------------------------------------------------------
-   Global: Typography + Colors
----------------------------------------------------------*/
+/* ========================================================
+   Global: Typography, Colors, Structure
+======================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --bg: #ffffff;
-  --ink: #0e1116;              /* Primary text */
-  --muted: #5b616e;            /* Secondary text */
-  --line: #e6e9ee;             /* Borders */
-  --brand: #0b83bd;            /* Accent / Active */
+  --ink: #0e1116;         /* primary text */
+  --muted: #5b616e;       /* secondary text */
+  --line: #e6e9ee;        /* borders */
+  --brand: #0b83bd;       /* accent / active link */
   --surface: #f7f9fc;
 
   --radius: 14px;
   --pill: 999px;
-  --shadow: 0 8px 24px rgba(16,24,40,0.06);
+  --shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
 }
 
 * {
@@ -46,9 +46,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------------
-   Header + Top Navigation
----------------------------------------------------------*/
+/* ========================================================
+   Header / Navigation
+======================================================== */
 
 header.site {
   border-bottom: 1px solid var(--line);
@@ -71,11 +71,6 @@ header.site {
   padding: 8px 12px;
 }
 
-
-/* --------------------------------------------------------
-   Tabs Navigation (consistent black inactive, blue active)
----------------------------------------------------------*/
-
 nav.tabs {
   display: flex;
   gap: 10px;
@@ -87,11 +82,11 @@ nav.tabs button.dropbtn {
   display: inline-flex;
   align-items: center;
   padding: 10px 16px;
+  font: inherit;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--pill);
-  background: #fff;
   color: var(--ink);
-  font: inherit;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -107,34 +102,34 @@ nav.tabs a.active,
 nav.tabs button.dropbtn.active,
 .dropdown:hover .dropbtn {
   background: var(--brand);
-  color: #fff;
   border-color: var(--brand);
+  color: #fff;
 }
 
 
-/* --------------------------------------------------------
-   Dropdown (Research)
----------------------------------------------------------*/
+/* ========================================================
+   Dropdown Menu (Research)
+======================================================== */
 
 .dropdown {
   position: relative;
 }
 
 .dropbtn {
-  border: 1px solid var(--line);
   background: #fff;
+  border: 1px solid var(--line);
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%;
   left: 0;
+  top: 110%;
+  min-width: 180px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  min-width: 180px;
   z-index: 10;
 }
 
@@ -153,9 +148,9 @@ nav.tabs button.dropbtn.active,
 }
 
 
-/* --------------------------------------------------------
+/* ========================================================
    Hero Section
----------------------------------------------------------*/
+======================================================== */
 
 .hero {
   padding: 60px 0 6px;
@@ -172,9 +167,9 @@ h1 {
 }
 
 
-/* --------------------------------------------------------
+/* ========================================================
    Main Content
----------------------------------------------------------*/
+======================================================== */
 
 main {
   padding: 28px 0 72px;
@@ -205,7 +200,7 @@ p.lead {
   max-width: 72ch;
 }
 
-note {
+.note {
   color: var(--muted);
   font-size: 14px;
 }
@@ -234,9 +229,55 @@ ul.clean li {
 }
 
 
-/* --------------------------------------------------------
+/* ========================================================
+   About Page Split Layout (simple + aligned)
+======================================================== */
+
+.about-split {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.about-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.about-text .lead {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 720px) {
+  .about-split {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .about-photo {
+    margin-bottom: 16px;
+  }
+}
+
+
+/* ========================================================
    Footer
----------------------------------------------------------*/
+======================================================== */
 
 footer.site {
   border-top: 1px solid var(--line);
