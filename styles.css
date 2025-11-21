@@ -1,263 +1,38 @@
-/* ========================================================
-   Global: Typography, Colors, Structure
-======================================================== */
+/* --------------------------------------------------------
+   Research Sidebar Layout
+---------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-:root {
-  --bg: #ffffff;
-  --ink: #0e1116;
-  --muted: #5b616e;
-  --line: #e6e9ee;
-  --brand: #0b83bd;
-  --surface: #f7f9fc;
-
-  --radius: 14px;
-  --pill: 999px;
-  --shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+.research-layout {
+  display: flex;
+  gap: 40px;
 }
 
-* {
-  box-sizing: border-box;
+.research-side {
+  width: 180px;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
 }
 
-body {
-  margin: 0;
-  background: var(--bg);
+.side-link {
+  display: block;
+  padding: 8px 0;
   color: var(--ink);
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-a {
+.side-link:hover {
   color: var(--brand);
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.side-link.active {
+  color: var(--brand);
+  font-weight: 600;
+  border-left: 3px solid var(--brand);
+  padding-left: 6px;
 }
 
-.wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 22px;
-}
-
-/* ========================================================
-   Header / Navigation
-======================================================== */
-
-header.site {
-  border-bottom: 1px solid var(--line);
-  background:
-    radial-gradient(1200px 400px at 50% -50%, var(--surface), transparent 70%),
-    linear-gradient(180deg, #f9fbfe 0%, #ffffff 60%);
-}
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-  gap: 16px;
-}
-
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  padding: 8px 12px;
-}
-
-nav.tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* Main nav tabs (About, Research, Experience, Contact) */
-nav.tabs > a,
-nav.tabs > .dropdown > .dropbtn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  font: inherit;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--pill);
-  color: var(--ink);
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-nav.tabs > a:hover,
-nav.tabs > .dropdown > .dropbtn:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow);
-  text-decoration: none;
-}
-
-nav.tabs > a.active,
-nav.tabs > .dropdown:hover > .dropbtn {
-  background: var(--brand);
-  border-color: var(--brand);
-  color: #fff;
-}
-
-/* ========================================================
-   Dropdown Menu (flat + rectangular)
-======================================================== */
-
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background: #fff;
-  border: 1px solid var(--line);
-}
-
-/* Dropdown container */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 110%;
-  min-width: 180px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  z-index: 10;
-}
-
-/* Dropdown items (flat, no pill shape) */
-.dropdown-content a {
-  display: block;
-  padding: 10px 14px;
-  color: var(--ink);
-  background: #fff;
-  border-radius: 0; /* Remove pill behavior */
-  border-bottom: 1px solid var(--line);
-  transition: background 0.15s ease;
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover {
-  background: var(--surface);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* ========================================================
-   Hero Section
-======================================================== */
-
-.hero {
-  padding: 60px 0 6px;
-}
-
-h1 {
-  font-size: clamp(30px, 5vw, 42px);
-  margin: 0 0 6px;
-}
-
-.tagline {
-  color: var(--muted);
-  max-width: 60ch;
-}
-
-/* ========================================================
-   Main Content
-======================================================== */
-
-main {
-  padding: 28px 0 72px;
-}
-
-h2 {
-  font-size: clamp(22px, 3vw, 28px);
-  margin: 26px 0 10px;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 3px;
-  margin-top: 8px;
-  background: linear-gradient(90deg, var(--brand), transparent);
-  border-radius: 2px;
-}
-
-h3 {
-  font-size: 18px;
-  margin: 18px 0 8px;
-}
-
-p.lead {
-  color: var(--muted);
-  max-width: 72ch;
-}
-
-.note {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* ========================================================
-   About Page Layout
-======================================================== */
-
-.about-split {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  margin: 40px 0;
-}
-
-.about-photo {
-  width: 240px;
-  height: 240px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
-  flex-shrink: 0;
-}
-
-.about-text {
+.research-content {
   flex: 1;
-  font-size: 16px;
-  line-height: 1.65;
-}
-
-@media (max-width: 720px) {
-  .about-split {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-
-  .about-photo {
-    margin-bottom: 16px;
-  }
-}
-
-/* ========================================================
-   Footer
-======================================================== */
-
-footer.site {
-  border-top: 1px solid var(--line);
-  padding: 28px 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
-  background: linear-gradient(180deg, #ffffff, #f9fbfe);
 }
