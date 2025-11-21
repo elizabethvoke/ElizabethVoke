@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="styles.css" />
   <meta name="description" content="Presentations by Elizabeth Voke, Ph.D." />
 </head>
+
 <body>
   <header class="site">
     <div class="wrap topbar">
       <div class="brand">Elizabeth Voke, Ph.D.</div>
+
       <nav class="tabs">
         <a href="index.html">About</a>
+
         <div class="dropdown">
           <a href="#" class="dropbtn active">Research</a>
           <div class="dropdown-content">
@@ -20,6 +23,7 @@
             <a href="presentations.html" class="active">Presentations</a>
           </div>
         </div>
+
         <a href="experience.html">Experience</a>
         <a href="contact.html" class="cta">Contact</a>
       </nav>
@@ -31,23 +35,36 @@
     <p class="tagline">Selected talks and conference presentations.</p>
   </div>
 
+  <!-- New sidebar layout -->
   <main class="wrap">
-    <ul class="clean">
-      <li>
-        “Investigating protein adsorption on nanoparticle‑based sensors and delivery vehicles in plants” —
-        <em>Controlled Release Society Annual Meeting</em>, 2024.
-      </li>
-      <li>
-        “Protein corona formation on lipid nanoparticles” — <em>AIChE Annual Meeting</em>, 2022.
-      </li>
-      <li>
-        “Emerging nanotechnologies for plant genetic engineering” — <em>Graduate Research Symposium</em>, 2023.
-      </li>
-    </ul>
+    <div class="research-layout">
+
+      <aside class="research-side">
+        <a href="publications.html" class="side-link">Publications</a>
+        <a href="presentations.html" class="side-link active">Presentations</a>
+      </aside>
+
+      <div class="research-content">
+        <ul class="clean">
+          <li>
+            “Investigating protein adsorption on nanoparticle-based sensors and delivery vehicles in plants” —
+            <em>Controlled Release Society Annual Meeting</em>, 2024.
+          </li>
+          <li>
+            “Protein corona formation on lipid nanoparticles” — <em>AIChE Annual Meeting</em>, 2022.
+          </li>
+          <li>
+            “Emerging nanotechnologies for plant genetic engineering” — <em>Graduate Research Symposium</em>, 2023.
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </main>
 
   <footer class="site">
     © <script>document.write(new Date().getFullYear())</script> Elizabeth Voke
   </footer>
+
 </body>
 </html>
