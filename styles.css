@@ -1,230 +1,248 @@
-/* Typeface: Inter (clean, modern, consulting-style) */
+/* --------------------------------------------------------
+   Global: Typography + Colors
+---------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root{
-  /* Palette */
-  --bg:#ffffff;
-  --ink:#0e1116;          /* primary text */
-  --muted:#5b616e;        /* secondary text */
-  --line:#e6e9ee;         /* dividers */
-  --brand:#0b83bd;        /* action / active */
-  --brand-ink:#0a5f87;
+:root {
+  --bg: #ffffff;
+  --ink: #0e1116;              /* Primary text */
+  --muted: #5b616e;            /* Secondary text */
+  --line: #e6e9ee;             /* Borders */
+  --brand: #0b83bd;            /* Accent / Active */
+  --surface: #f7f9fc;
 
-  /* Surface tints */
-  --surface:#f7f9fc;
-  --surface-strong:#eff3f9;
-
-  /* Rhythm */
-  --radius:14px;
-  --radius-pill:999px;
-  --shadow:0 8px 24px rgba(16,24,40,0.06);
+  --radius: 14px;
+  --pill: 999px;
+  --shadow: 0 8px 24px rgba(16,24,40,0.06);
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+* {
+  box-sizing: border-box;
 }
 
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
 
-.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
 
-/* ---------- Header / Topbar ---------- */
-header.site{
-  position:relative;
-  border-bottom:1px solid var(--line);
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+
+/* --------------------------------------------------------
+   Header + Top Navigation
+---------------------------------------------------------*/
+
+header.site {
+  border-bottom: 1px solid var(--line);
   background:
     radial-gradient(1200px 400px at 50% -50%, var(--surface), transparent 70%),
     linear-gradient(180deg, #f9fbfe 0%, #ffffff 60%);
 }
-.topbar{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:16px;padding:18px 0;
-}
-.brand{
-  font-weight:700; letter-spacing:.2px;
-  padding:8px 12px;
-  border-radius:10px;
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  gap: 16px;
 }
 
-/* ---------- Tabs / Nav ---------- */
-nav.tabs{display:flex;gap:10px;flex-wrap:wrap}
-.tabs a{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:10px 16px;
-  border:1px solid var(--line);
-  border-radius:var(--radius-pill);
-  color:var(--ink);
-  background:#fff;
-  transition:all .18s ease;
-  box-shadow:0 0 0 rgba(0,0,0,0);
-}
-.tabs a:hover{
-  transform:translateY(-1px);
-  box-shadow:var(--shadow);
-  text-decoration:none;
-}
-.tabs a.active{
-  border-color:var(--brand);
-  color:#fff;
-  background:var(--brand);
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 8px 12px;
 }
 
-/* Prominent CTA (Contact) */
-.cta{
-  padding:10px 18px;
-  border-radius:var(--radius-pill);
-  color:#fff !important;
-  background:var(--brand);
-  border:1px solid var(--brand);
-}
-.cta:hover{filter:brightness(.96); text-decoration:none}
 
-/* ---------- Hero ---------- */
-.hero{padding:60px 0 6px}
-h1{
-  font-size:clamp(30px,5vw,42px);
-  margin:0 0 6px;
-  letter-spacing:.2px;
-}
-.tagline{
-  color:var(--muted);
-  max-width:60ch;
+/* --------------------------------------------------------
+   Tabs Navigation (consistent black inactive, blue active)
+---------------------------------------------------------*/
+
+nav.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* ---------- Main Content ---------- */
-main{padding:28px 0 72px}
-h2{
-  font-size:clamp(22px,3vw,28px);
-  margin:26px 0 10px;
-  position:relative;
-}
-h2::after{
-  content:"";
-  display:block;
-  width:64px;height:3px;
-  margin-top:8px;
-  background:linear-gradient(90deg, var(--brand), transparent);
-  border-radius:2px;
-}
-h3{font-size:18px;margin:18px 0 8px}
-
-p.lead{color:var(--muted);max-width:72ch}
-.note{color:var(--muted);font-size:14px}
-
-ul.clean{padding-left:20px;margin:10px 0}
-ul.clean li{margin:8px 0}
-
-/* Divider with subtle strength */
-.divider{
-  height:1px;background:var(--line);
-  margin:26px 0;
-}
-
-/* ---------- Cards (auto style existing blocks) ---------- */
-.card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:18px 18px;
-}
-
-/* ---------- Footer ---------- */
-footer.site{
-  border-top:1px solid var(--line);
-  padding:28px 0;
-  color:var(--muted);
-  font-size:14px;
-  text-align:center;
-  background:linear-gradient(180deg,#ffffff,#f9fbfe);
-}
-
-/* ---------- Small tweaks for consulting feel ---------- */
-.small{font-size:14px}
-em, i{color:var(--muted)}
-strong{font-weight:600}
-
-/* ---------- Dropdown (Research) ---------- */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Style the button inside the dropdown to resemble other tabs */
-.dropbtn {
+nav.tabs a,
+nav.tabs button.dropbtn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   padding: 10px 16px;
   border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  color: var(--ink);
+  border-radius: var(--pill);
   background: #fff;
-  transition: all .18s ease;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.18s ease;
 }
-.dropbtn:hover {
+
+nav.tabs a:hover,
+nav.tabs button.dropbtn:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow);
   text-decoration: none;
 }
-.dropbtn.active,
+
+nav.tabs a.active,
+nav.tabs button.dropbtn.active,
 .dropdown:hover .dropbtn {
-  border-color: var(--brand);
   background: var(--brand);
   color: #fff;
+  border-color: var(--brand);
 }
 
-/* Dropdown content (hidden by default) */
+
+/* --------------------------------------------------------
+   Dropdown (Research)
+---------------------------------------------------------*/
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  top: 110%;
+  left: 0;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   min-width: 180px;
-  margin-top: 4px;
   z-index: 10;
 }
+
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
   color: var(--ink);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.dropdown-content a:hover {
-  background-color: var(--surface);
 }
 
-/* Show the dropdown menu on hover */
+.dropdown-content a:hover {
+  background: var(--surface);
+}
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* ---------- About page profile layout ---------- */
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: flex-start;
-  margin-bottom: 24px;
+
+/* --------------------------------------------------------
+   Hero Section
+---------------------------------------------------------*/
+
+.hero {
+  padding: 60px 0 6px;
 }
 
-.profile-photo {
-  width: 160px;
-  height: 160px;
+h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  margin: 0 0 6px;
+}
+
+.tagline {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+
+/* --------------------------------------------------------
+   Main Content
+---------------------------------------------------------*/
+
+main {
+  padding: 28px 0 72px;
+}
+
+h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin: 26px 0 10px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--brand), transparent);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 18px 0 8px;
+}
+
+p.lead {
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+ul.clean {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+ul.clean li {
+  margin: 8px 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 26px 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  object-fit: cover;
   box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+
+/* --------------------------------------------------------
+   Footer
+---------------------------------------------------------*/
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  background: linear-gradient(180deg, #ffffff, #f9fbfe);
 }
