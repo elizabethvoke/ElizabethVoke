@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Elizabeth Voke, Ph.D. — About</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css" />
   <meta name="description"
         content="Drug delivery scientist with experience in proteomics, now focusing on business strategy consulting." />
 </head>
@@ -17,11 +17,12 @@
       <nav class="tabs">
         <a href="index.html" class="active">About</a>
 
+        <!-- Research tab now links directly to Publications (Option A) -->
         <div class="dropdown">
-          <button class="dropbtn">Research</button>
+          <a href="publications.html#publications" class="dropbtn">Research</a>
           <div class="dropdown-content">
-            <a href="publications.html">Publications</a>
-            <a href="presentations.html">Presentations</a>
+            <a href="publications.html#publications">Publications</a>
+            <a href="publications.html#presentations">Presentations</a>
           </div>
         </div>
 
@@ -39,15 +40,9 @@
   </div>
 
   <main class="wrap">
-
     <!-- Clean, aligned split layout -->
     <div class="about-split">
-
-      <!-- Image size is controlled by .about-photo in CSS -->
-      <img src="images/profile-placeholder.png"
-           alt="Profile photo"
-           class="about-photo">
-
+      <img src="images/profile-placeholder.png" alt="Profile photo" class="about-photo">
       <div class="about-text">
         <p>
           I recently completed my Ph.D. in Chemical and Biomolecular Engineering at the University of California,
