@@ -6,14 +6,14 @@
 
 :root {
   --bg: #ffffff;
-  --ink: #0e1116;
-  --muted: #5b616e;
-  --line: #e6e9ee;
-  --brand: #0b83bd;
+  --ink: #0e1116;         /* primary text */
+  --muted: #5b616e;       /* secondary text */
+  --line: #e6e9ee;        /* borders */
+  --brand: #0b83bd;       /* accent / active link */
   --surface: #f7f9fc;
 
   --radius: 14px;
-  --pill: 999px;
+  --pill: 999px;          /* still available but not applied to nav */
   --shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
 }
 
@@ -76,7 +76,7 @@ nav.tabs {
   flex-wrap: wrap;
 }
 
-/* Main nav tabs (About, Research, Experience, Contact) */
+/* Main navigation tabs: rectangular buttons (no pill) */
 nav.tabs > a,
 nav.tabs > .dropdown > .dropbtn {
   display: inline-flex;
@@ -85,7 +85,7 @@ nav.tabs > .dropdown > .dropbtn {
   font: inherit;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: var(--pill);
+  border-radius: var(--radius);
   color: var(--ink);
   cursor: pointer;
   transition: all 0.18s ease;
@@ -106,7 +106,7 @@ nav.tabs > .dropdown:hover > .dropbtn {
 }
 
 /* ========================================================
-   Dropdown Menu (flat + rectangular)
+   Dropdown Menu (flattened, no bubbles)
 ======================================================== */
 
 .dropdown {
@@ -118,7 +118,7 @@ nav.tabs > .dropdown:hover > .dropbtn {
   border: 1px solid var(--line);
 }
 
-/* Dropdown container */
+/* container */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -127,18 +127,18 @@ nav.tabs > .dropdown:hover > .dropbtn {
   min-width: 180px;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   z-index: 10;
 }
 
-/* Dropdown items (flat, no pill shape) */
+/* items: flat list with small separators */
 .dropdown-content a {
   display: block;
   padding: 10px 14px;
   color: var(--ink);
   background: #fff;
-  border-radius: 0; /* Remove pill behavior */
+  border-radius: 0;              /* no pill shape */
   border-bottom: 1px solid var(--line);
   transition: background 0.15s ease;
 }
@@ -170,7 +170,7 @@ h1 {
 
 .tagline {
   color: var(--muted);
-  max-width: 60ch;
+  /* no max-width, so tagline spans full width */
 }
 
 /* ========================================================
@@ -211,6 +211,29 @@ p.lead {
   font-size: 14px;
 }
 
+ul.clean {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+ul.clean li {
+  margin: 8px 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 26px 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
 /* ========================================================
    About Page Layout
 ======================================================== */
@@ -229,6 +252,7 @@ p.lead {
   object-fit: cover;
   box-shadow: var(--shadow);
   flex-shrink: 0;
+  display: block;
 }
 
 .about-text {
@@ -247,6 +271,45 @@ p.lead {
   .about-photo {
     margin-bottom: 16px;
   }
+}
+
+/* ========================================================
+   Research Sidebar Layout (Publications + Presentations)
+======================================================== */
+
+.research-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.research-side {
+  width: 180px;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+}
+
+.side-link {
+  display: block;
+  padding: 8px 0;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.side-link:hover {
+  color: var(--brand);
+}
+
+.side-link.active {
+  color: var(--brand);
+  font-weight: 600;
+  border-left: 3px solid var(--brand);
+  padding-left: 6px;
+}
+
+.research-content {
+  flex: 1;
 }
 
 /* ========================================================
